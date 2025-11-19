@@ -1,0 +1,16 @@
+# Step 3: Format train/validation/test data for chatbot
+
+# Function to format each row
+def format_example(row):
+    return {
+        "instruction": "User: " + str(row["context"]),  # User's message
+        "response": "Therapist: " + str(row["utterance"])  # Therapist reply
+    }
+
+# Apply formatting to each CSV DataFrame
+train_formatted = train_df.apply(format_example, axis=1).tolist()
+valid_formatted = valid_df.apply(format_example, axis=1).tolist()
+test_formatted  = test_df.apply(format_example, axis=1).tolist()
+
+# Check the first example to confirm
+print(train_formatted[0])

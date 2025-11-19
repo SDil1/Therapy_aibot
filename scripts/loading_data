@@ -1,0 +1,9 @@
+import pandas as pd
+
+# Load train CSV
+train_df = pd.read_csv("empatheticdialogues/train.csv", on_bad_lines='skip', engine="python")
+valid_df = pd.read_csv("empatheticdialogues/valid.csv", on_bad_lines='skip', engine="python")
+test_df  = pd.read_csv("empatheticdialogues/test.csv", on_bad_lines='skip', engine="python")
+
+# Check first row
+print(train_df.head())
