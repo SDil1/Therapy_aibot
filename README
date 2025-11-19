@@ -1,0 +1,77 @@
+# AI Therapist Chatbot 💬🧠
+
+A fine-tuned AI model designed to help people with emotions, loneliness, and provide supportive, therapist-like conversations.
+
+---
+
+## 🌟 Features
+- Empathetic, emotionally supportive responses  
+- Fine-tuned using LoRA for efficiency  
+- Runs easily in Google Colab  
+- Simple chat interface using Gradio  
+- Uses the EmpatheticDialogues dataset  
+
+---
+
+## 📁 Project Structure
+
+ai-therapist-chatbot/
+│
+├── data/
+│   ├── train.csv
+│   ├── valid.csv
+│   └── test.csv
+│
+├── scripts/
+│   ├── step1_load_data.py
+│   ├── step2_format_data.py
+│   ├── step3_finetune.py
+│   └── step4_chat_interface.py
+│
+├── requirements.txt
+└── README.md
+
+---
+
+## 📦 Installation
+
+Clone the repo:
+
+```bash
+git clone https://github.com/SDil1/Therapy_aibot.git
+cd ai-therapist-chatbot
+pip install -r requirements.txt
+
+## 🧠 Training Steps
+
+1. Download the EmpatheticDialogues dataset  
+2. Place `train.csv`, `valid.csv`, and `test.csv` into the `data/` folder  
+3. Run the Colab scripts in the `scripts/` directory in order:
+
+   - `step1_load_data.py` – loads the dataset  
+   - `step2_format_data.py` – cleans & formats the data for training  
+   - `step3_finetune.py` – fine-tunes the model using LoRA  
+   - `step4_chat_interface.py` – launches the Gradio chatbot interface  
+
+4. After training finishes, run the chat interface script:
+
+```bash
+python scripts/step4_chat_interface.py
+
+## 📊 Dataset
+
+**Empathetic Dialogues Dataset**  
+Used to train emotionally supportive and empathetic conversation models.  
+Make sure to place the following files inside the `data/` folder:
+
+- `train.csv`
+- `valid.csv`
+- `test.csv`
+
+You can download the dataset from publicly available mirrors or Kaggle.
+
+---
+
+## 📜 License
+
+This project is released under the **MIT License**, allowing free use, modification, and distribution.
